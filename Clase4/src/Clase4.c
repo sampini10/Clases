@@ -13,7 +13,7 @@
 #include "utn.h"
 
 int main(void) {
-
+	setbuf(stdout,NULL);
 
 	float resultado;
 	int numero1;
@@ -21,11 +21,9 @@ int main(void) {
 	int respuesta;
 
 	printf("\nNumero 1?:");
-	//Agregar fflush
 	scanf("%d",&numero1);
 
 	printf("\nNumero 2?:");
-	//Agregar fflush
 	scanf("%d" ,&numero2);
 
 	respuesta = dividir(&resultado,numero1,numero2);
