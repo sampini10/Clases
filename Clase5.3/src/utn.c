@@ -100,3 +100,4 @@ int utn_getCaracter(char* pResultado, char* mensaje,char* mensajeError, char min
 
 
 
+

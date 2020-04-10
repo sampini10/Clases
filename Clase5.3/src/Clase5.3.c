@@ -14,8 +14,7 @@
 #define NUMEROS 5
 
 void imprimirArray(int listaDeEdades[],int numeros);
-
-
+float calcularPromedio(int edades[], int numeros);
 int main(void) {
 
 	setbuf(stdout, NULL);
@@ -23,6 +22,7 @@ int main(void) {
 	int edad;
 	int edades[NUMEROS];
 	int i;
+	float promedio;
 //RECORRO PARA CARGAR FORMA SECUENCIAL
 	for(i=0; i<NUMEROS; i++)
 	{
@@ -41,6 +41,10 @@ int main(void) {
 
 imprimirArray(edades, NUMEROS);
 
+promedio = calcularPromedio(edades, NUMEROS);
+printf("Promedio: \n%f" ,promedio);
+
+
 	return EXIT_SUCCESS;
 }
 
@@ -52,3 +56,22 @@ void imprimirArray(int listaDeEdades[],int numeros)
 	    	  printf("La edad: %d" , listaDeEdades[i]);
 	      }
 }
+float calcularPromedio(int edades[], int numeros)
+{
+
+	float promedio;
+	int i;
+	int acumulador = 0;
+
+	for(i=0; i<numeros; i++)
+		{
+			acumulador = acumulador + edades[i];
+
+		}
+	promedio = (float)acumulador/numeros;
+	return promedio;
+}
+
+
+
+
