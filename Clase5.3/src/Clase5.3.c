@@ -72,6 +72,3 @@ float calcularPromedio(int edades[], int numeros)
 	return promedio;
 }
 
-
-
-
